@@ -28,9 +28,10 @@ class NewContent(View):
         return render(request, self.template_name)
     
     def post(self, request):
-        param = request.POST.get("content")
+        param = request.POST.get("content", '')
+        param2 = request.FILES.get('up_photo', False)
         print("전달받은 내용:" + param)
-        feed = Feed(content=param)
+        feed = Feed(content=param, photo = param2)
         feed.save()
 
         return redirect('edu:tag_study')

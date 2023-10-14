@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
 {% block content %}
-    <img src="https://i.namu.wiki/i/C9DgUkHfi6o7f1AWb529VHjHQeWtTFhVdFNc6YVScQzg4pARwRjBOWgidRveffl1j8ZqQbXQ40d64t1XVHL6Zw.svg" width="100px"/>
     <p>
         <a href="https://www.instagram.com/">
             <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"target="_blank"/><br/>
@@ -13,6 +11,7 @@
             {% for f in feed_list %}
                 <li>
                 {{ f.content }}
+                <img src="/media/{{ f.photo }}"/>
                 </li>
             {% endfor %}
         </ul>    
@@ -26,7 +25,7 @@
         </strong>
         팔로워
         <strong>
-            181<br/>
+            180<br/>
         </strong>
         팔로우
         <strong>
