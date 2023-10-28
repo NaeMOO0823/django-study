@@ -1,0 +1,64 @@
+{% block content %}
+    <strong><h1>SURVEY</h1></strong>
+
+    <p>
+        <label for="name_input">이름:</label>
+        <input type="text" size="30" name="name" id="name_input" placeholder="이름을 반드시 입력해주세요">
+    </p>
+
+    <p>
+        <label for="address_input">주소:</label>
+        <input size="30" name="address" id="address_input"/>
+    </p>
+
+    <p>
+        <label for="company_input">회사:</label>
+        <input type="text" size="30" name="company" id="company_input" value="렛츠코딩앤플레이" disabled/>
+    </p>
+
+    <p>
+        성별:
+        <input type="radio" name="sex">남</input>
+        <input type="radio" name="sex">여</input>
+    </p>
+
+    <p>
+        전화번호 앞자리:
+        <input type="radio" name="tel">기타</input>
+        <input type="radio" name="tel">010</input>
+    </p>
+
+    <p>
+        좋아하는 애완 동물은?
+        <input type="checkbox">개</input>
+        <input type="checkbox">고양이</input>
+        <input type="checkbox">뱀</input>
+        <input type="checkbox">개미</input>
+    </p>
+
+    <p>
+        <label for="id_input">ID:</label>
+        <input size="30" name="id" id="id_input" placeholder="아이디">
+    </p>
+
+    <p>
+        <label for="pwd_input">PW:</label>
+        <input type="password" size="30" name="pwd" id="pwd_input" placeholder="패스워드">
+    </p>
+
+    <p>
+        <select>
+            <option value="1">010</option>
+            <option value="2">016</option>
+            <option value="3">017</option>
+        <select/>
+    </p>
+
+    <p>
+        <textarea cols="50" rows="20" placeholder="Memo"></textarea>
+    </p>
+
+    <p>
+        <input type="submit" value="제출"/>
+    </p>
+{% endblock content %}

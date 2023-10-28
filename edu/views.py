@@ -44,3 +44,9 @@ class NewContent(View):
         feed.save()
 
         return redirect('edu:tag_study')
+    
+class Survey(View):
+        template_name = 'survey.html'
+
+        def get(self, request):
+            return render(request, self.template_name)
