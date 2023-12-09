@@ -8,5 +8,6 @@ urlpatterns = [
     path('tag', views.TagStudy.as_view(), name='tag_study'),
     path('new', views.NewContent.as_view(), name="new_content"),
     path('survey', views.Survey.as_view(), name="survey"),
-    path('milk', views.Palgong.as_view(), name='palgong')
+    path('milk', views.Palgong.as_view(), name='palgong'),
+    path('feed/<int:pk>', views.FeedDetail.as_view(), name='feed_detail')
 ]

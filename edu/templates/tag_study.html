@@ -10,7 +10,7 @@
         <ul>
             {% for f in feed_list %}
                 <li>
-                {{ f.content }}
+                <a href="{% url 'edu:feed_detail' f.id %}">{{ f.content }}</a>
                 <img src="/media/{{ f.photo }}"/>
                 </li>
             {% endfor %}
@@ -25,11 +25,11 @@
         </strong>
         팔로워
         <strong>
-            183<br/>
+            192<br/>
         </strong>
         팔로우
         <strong>
-            182
+            189
         </strong>
     </p>
     <p>
