@@ -1,7 +1,9 @@
 from django.views.generic import View
 from django.shortcuts import get_object_or_404, render,redirect
 from .models import Feed
-from django.views.generic import View, DetailView
+from django.views.generic import View, DetailView, UpdateView
+from django.urls import reverse_lazy
+from .forms import *
 
 class Index(View):
     template_name = 'index.html'
@@ -73,3 +75,14 @@ class FeedDetail(DetailView):
         context['feed'] = feed
 
         return context
+
+class FeedUpdate(UpdateView):
+    model = Feed
+    template_name = "feed/update.html"
+    form_class = FeedForm
+
+    def get_object(self):
+        return get_object_or_404(Feed, pk = self.kwargs['pk'])
+    
+    def get_success_url(self):
+        return reverse_lazy('edu:feed_detail', args=(self.object.id,))

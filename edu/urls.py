@@ -9,5 +9,6 @@ urlpatterns = [
     path('new', views.NewContent.as_view(), name="new_content"),
     path('survey', views.Survey.as_view(), name="survey"),
     path('milk', views.Palgong.as_view(), name='palgong'),
-    path('feed/<int:pk>', views.FeedDetail.as_view(), name='feed_detail')
+    path('feed/<int:pk>', views.FeedDetail.as_view(), name='feed_detail'),
+    path('feed/<int:pk>/update', views.FeedUpdate.as_view(), name='feed_update')
 ]
